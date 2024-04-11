@@ -1,0 +1,133 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+     
+</head>
+<body>
+       
+</body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>Leaderboard</title>
+    <style>
+      /* Button Styles */
+      .responsive-button {
+          display: block;
+          width: 10%; /* Adjust the width based on your design */
+          padding: 1.5em; /* Adjust the padding based on your design */
+          background-color: #f0980a;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          outline: none;
+          position: relative;
+          margin: 30px auto 0; /* Center the button horizontally and add margin at the top */
+          max-width: 80%; /* Ensure the button doesn't exceed the width of its container */
+          box-sizing: border-box; /* Include padding and border in the element's total width and height */
+          text-align: center; /* Center the text horizontally */
+          white-space: nowrap; /* Prevents text from wrapping to the next line */
+          overflow: hidden; /* Hides any overflowing text */
+          text-overflow: ellipsis;
+          font-weight: bold; /* Displays an ellipsis (...) to indicate truncated text */
+      }
+      
+      /* Media queries for responsiveness */
+      @media screen and (max-width: 600px) {
+          .responsive-button {
+              width: 50%;
+              padding: 1em;
+          }
+      }
+      
+      @media screen and (max-width: 400px) {
+          .responsive-button {
+              width: 80%;
+              padding: 0.5em;
+          }
+
+      }
+
+      @media only screen and (max-width: 768px) {
+          .leaderboard {
+              font-size: 1.0em;
+              width: 80%; /* Adjust as needed */
+          }
+      }
+
+/* Media Query for screens smaller than 480px */
+      @media only screen and (max-width: 480px) {
+          .leaderboard {
+              width: 95%; /* Adjust as needed */
+              padding-top: 10px;
+              padding-bottom: 10px;
+              font-size: 1.0em; /* Adjust font size as needed */
+          }
+      }
+      </style>
+  </head>
+  
+  <body style="background-color: #FFE5B4;">
+    <div style="justify-content: center;">
+      <h1 class="leaderboard" style="margin-top: 5%; 
+                text-align: center; 
+                color: rgb(255, 255, 255); 
+                width: 30%; 
+                background-color: #f0980a; 
+                margin-left: auto; 
+                margin-right: auto; 
+                padding-top: 20px; 
+                padding-bottom: 20px;
+                border-radius: 10px;">LEADERBOARD
+      </h1>
+    <div>
+    <table class="table table-striped" style="border: 3px solid rgb(235, 78, 5); width:70%; margin-left: auto; margin-right: auto; text-align: center; margin-top: 30px;">
+        <thead>
+          <tr style="font-size: larger;">
+            <th scope="col" style="border: 3px solid rgb(235, 78, 5); background-color: #f0980a; color: #fff;">Rank</th>
+            <th scope="col" style="border: 3px solid rgb(235, 78, 5); background-color: #f0980a; color: #fff;">Name</th>
+            <th scope="col" style="border: 3px solid rgb(235, 78, 5); background-color: #f0980a; color: #fff;">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for entry in top10 %}
+          <tr style="font-size: large;">
+            <th scope="row" style="border: 3px solid rgb(235, 78, 5);">{{ entry.index }}</th>
+            <td style="border: 3px solid rgb(235, 78, 5);">{{ entry.name }}</td>
+            <td style="border: 3px solid rgb(235, 78, 5);">{{ entry.score }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    <button type="submit" id="homebtn" class="responsive-button" onmouseover="this.style.backgroundColor='#c96b00';" onmouseout="this.style.backgroundColor='#f0980a';">Home</button>
+
+    <script>
+        const home=document.getElementById('homebtn');
+        home.addEventListener('click',()=>{
+            window.location.href='/';
+        })
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+

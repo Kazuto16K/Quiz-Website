@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'quiz_type/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="{% static 'quizes/final3.js' %}" defer></script>
+    
+</head>
+<body>
+    <head>
+        <div class="color">
+            <img src="{% static 'quiz_type/images/Ellipse 4.png' %}" alt="circle1" class="c1">
+            <img src="{% static 'quiz_type/images/Ellipse 4.png' %}" alt="circle2" width=100px class="c2">
+        </div>
+        </div>
+    </head>
+    <div class="main">
+        <div class="box">
+            <h2 id="qno">Question 1/10</h2>
+            <div>
+                <h1 id="question">Question?</h1>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="mcq" id="answer-buttons">
+        <button class="ans-buttons"><p>Option1</p></button>
+        <button class="ans-buttons"><p>Option2</p></button>
+        <button class="ans-buttons"><p>Option3</p></button>
+        <button class="ans-buttons"><p>Option4</p></button>
+
+        
+    </div>
+    <div class="mcq">
+        <button class="nxt-btn" id="next-btn">Next</button>
+    </div>
+    
+    <!-- MODAL FORM-->
+    <div id="myForm">
+    <form id="nameForm" method="post">
+        {% csrf_token %}
+        <div class="name-box">
+            <input type="text" id="name-input" placeholder="Name" required>
+        </div>
+        <button type="submit" class="btn"><b>Submit</b></button>
+    </form>
+    </div>
+</body>
+</html>
+
+
+

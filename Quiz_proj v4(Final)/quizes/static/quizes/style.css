@@ -1,0 +1,204 @@
+/* Orange #FF781F
+Peach #FFE5B4 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #FFE5B4;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+nav .h2{
+    color: white;
+    font-size: 20px;
+}
+.s{
+    background: #FF781F;
+}
+.s1{
+    color: white;
+}
+nav img{
+    padding-right: 15px;
+}
+main h1{
+   color: black;
+   font-weight: 700;
+   font-size: 50px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   text-align: center;
+}
+main h2 {
+    font-weight: 400;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 15px;
+    margin-bottom: 60px;
+}
+
+.t1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.r1, .r2{
+    display: flex;
+}
+
+@media screen and (min-width: 300px) and (max-width: 790px) {
+    .r1, .r2{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.anime, .movies, .quiz, .football{
+    margin: 20px;
+    background: black;
+    border-radius: 10px;
+    height: 200px;
+    width: 350px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 4px 5px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.quiz:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);
+  }
+.football:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);
+  }
+.anime:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);
+  }
+.movies:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);
+  }
+
+.anime{
+    background: url('./images/yourname.jpg');
+    background-size: contain;
+}
+.anime, .movies, .quiz, .football p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* text-shadow: 1px 1px 2px black; */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1), 
+			   0px 0px 20px rgb(34, 36, 34),
+			   0px 0px 30px rgb(24, 26, 23),
+			   0px 0px 40px rgb(59, 61, 58),
+			   0px 0px 55px rgb(6, 7, 6),
+			   0px 0px 75px rgb(0, 0, 0);
+    padding-top: 70px;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 8px;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.football{
+    background: url('./images/city2.jpg');
+    background-size: cover;
+}
+.quiz{
+    background-image: url('./images/quiz.jpg');
+    background-size: cover;
+}
+.movies{
+    background: url('./images/rocky.jpg');
+    background-size: contain;
+}
+
+footer{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: left;
+}
+
+.about{
+    /* width: 40%;
+    height: 100%; */
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.about h4 {
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 600;
+    text-decoration: underline;
+}
+.about p{
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+}
+.contact{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.contact h4{
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 15px;
+    font-size: 600;
+    text-align: left;
+    text-decoration: underline;
+}
+.contact p{
+    color: white;
+    font-size: 10px;
+}
+.contact a{
+    color: white;
+}
+.home, .mail, .twitter{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.no-underline{
+    text-decoration: none;
+}
+
+

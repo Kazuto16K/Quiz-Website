@@ -1,0 +1,197 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #FFE5B4;
+}
+.color{
+    background: #FF781F;
+    padding: 70px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.color .h1{
+    font-weight: 400;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    position: relative;
+    top: -100px;
+    border: transparent;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+    width: 60%;
+    height: 10%;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   border-radius: 20px;
+   text-align: center;
+   background: #FFFFFF;
+}
+
+.box h2 {
+   font-weight: 900;
+   color: #FF781F;
+   padding-top: 5px;
+   padding-bottom: 10px;
+}
+.box h1{
+    font-size: 25px;
+    padding: 10px 20px;
+}
+
+.mcq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -45px;
+}
+
+.answer-buttons{
+    width: 50%;
+    margin: 15px;
+    cursor: pointer;
+    background: #FFFFFF;
+    padding: 20px;
+    padding-left: 35px;
+    border-radius: 20px;
+    border: 2px solid #FF781F;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.4)
+    );
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.5);
+}
+
+.answer-buttons:hover{
+    background: #FF781F;
+    color: #FFFFFF;
+    transition: 0.2s ease-in;
+}
+
+.nxt-btn {
+  background-color: #eb6a00;
+  border: 0;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 500;
+  outline: 0;
+  width: 7%;
+  margin-top: 20px;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.nxt-btn:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 25px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+
+
+.nxt-btn:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+  .nxt-btn {
+    width: 15%; /* Adjust width for smaller screens */
+    font-size: 18px;
+    text-align: center;
+    padding-right: 45px;
+     /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nxt-btn {
+    width: 15%; /* Adjust width for smaller screens */
+    font-size: 15px;
+    text-align: center;
+    padding-right: 45px;
+     /* Adjust font size for smaller screens */
+  }
+}
+
+.answer-buttons.correct{
+  background: #9aeabc;
+}
+
+.answer-buttons.incorrect{
+  background: #ff9393;
+}
+
+
+#myForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.name-box{
+  margin-bottom:20px;
+}
+/* Style for the submit button */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0980a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #c96b00;
+}
+
+.name-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.name-box input[type="text"]:focus {
+  border-color: #dc620a;
+}
+/* OVERLAY PART */
+

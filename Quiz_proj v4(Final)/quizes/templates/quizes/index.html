@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'quizes/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <script src="{% static 'quizes/final3.js' %}" defer></script>
+    
+</head>
+<body>
+    <nav>
+        <h2> <a href="/"><span class="s1">Quiz</span> <span class="s" style="color:black;">Point</span></a></h2>
+        <img src="{% static 'quizes/images/i1.png' %}" height="50px"  >
+    </nav>
+    
+    <main>
+        <h1 class="t">Welcome to Quiz Point</h1>
+        <h2>Exercise your brain with these interesting quizzes and puzzles, 
+            win points, and impress your friends & colleagues!</h2>
+
+        <h1 class="t1">Choose your genre and let's get started!</h1>
+        <div class="cards">
+            <div class="r1">
+                <a id="anime1" href="/anime" onclick="handleStartButtonClick('Anime')"  style="text-decoration: none;">
+                    <div class="anime" >
+                        <p>Anime</p>
+                    </div>
+                </a>
+
+                <a id="i2" href="/football" onclick="handleStartButtonClick('Football')"  style="text-decoration: none;">
+                    <div class="football">
+                        <p>Football</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="r2">
+
+                <a id="i3" href="/iq" onclick="handleStartButtonClick('IQ')" style="text-decoration: none;">
+                    <div class="quiz">
+                        <p>IQ</p>
+                    </div>
+                </a>
+
+                <a id="i4" href="/movie" onclick="handleStartButtonClick('Movie')" style="text-decoration: none;">
+                    <div class="movies">
+                        <p>Movies</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="about">
+            <h4>About Us</h4>
+            <p>Hello, I am Soumava Das, This website is designed by me, using Django as backend framework, SQLite as Database and vanilla Javascript with AJAX, The frontend html and css is done by my friend Sohaum Ghosh. 
+                <br>Thankyou for visting this website share your valuable feedback for sure.</p>
+        </div>
+
+        <div class="contact">
+            <h4>Contact Info</h4>
+
+            <div class="home">
+                <img src="{% static 'quizes/images/loc.jpg' %}" height="30px" alt="home">
+                <p><a href='#'>Kolkata</a></p>
+            </div>
+
+            <div class="mail">
+                <img src="{% static 'quizes/images/mail2.png' %}" height="30px" alt="home">
+                <p> <a href="#">itisrj611@gmail.com</a> </p>
+            </div>
+
+            <div class="twitter">
+                <img src="{% static 'quizes/images/tw2.png' %}" height="30px" alt="home">
+                <p> <a href="#">Twitter</a> </p>
+            </div>
+        </div>
+
+        <div class="admin">
+            <h4>Admins</h4>
+        </div>
+       
+    </footer>
+</body>
+</html>
